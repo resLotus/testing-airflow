@@ -55,10 +55,10 @@ def dag_test():
     @task(task_id='connect_to_db')
     def connect_to_db(ti=None):
         DB_NAME = ""
-        DB_USER = "airflow"
-        DB_PASS = "airflow"
-        DB_HOST = "postgres"
-        DB_PORT = "5432"
+        DB_USER = ""
+        DB_PASS = ""
+        DB_HOST = ""
+        DB_PORT = ""
 
         conn = psycopg2.connect(database=DB_NAME,
                                 user=DB_USER,

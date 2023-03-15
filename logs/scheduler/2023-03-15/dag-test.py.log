@@ -594,3 +594,11 @@
 [2023-03-15T17:26:25.442+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:25.441+0000] {dag.py:2585} INFO - Sync 1 DAGs
 [2023-03-15T17:26:25.455+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:25.455+0000] {dag.py:3340} INFO - Setting next_dagrun for 01_dag_test to 2023-03-15T00:00:00+00:00, run_after=2023-03-16T00:00:00+00:00
 [2023-03-15T17:26:25.465+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag-test.py took 0.324 seconds
+[2023-03-15T17:26:50.365+0000] {processor.py:154} INFO - Started process (PID=6690) to work on /opt/airflow/dags/dag-test.py
+[2023-03-15T17:26:50.366+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag-test.py for tasks to queue
+[2023-03-15T17:26:50.368+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:50.368+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag-test.py
+[2023-03-15T17:26:50.640+0000] {logging_mixin.py:120} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3437 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2023-03-15T17:26:50.647+0000] {processor.py:766} INFO - DAG(s) dict_keys(['01_dag_test']) retrieved from /opt/airflow/dags/dag-test.py
+[2023-03-15T17:26:50.668+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:50.668+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2023-03-15T17:26:50.681+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:50.681+0000] {dag.py:3340} INFO - Setting next_dagrun for 01_dag_test to 2023-03-15T00:00:00+00:00, run_after=2023-03-16T00:00:00+00:00
+[2023-03-15T17:26:50.694+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag-test.py took 0.332 seconds

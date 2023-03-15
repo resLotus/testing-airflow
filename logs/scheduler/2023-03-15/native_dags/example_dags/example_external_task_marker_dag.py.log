@@ -662,3 +662,11 @@
 [2023-03-15T17:26:14.450+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:14.450+0000] {dag.py:3340} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
 [2023-03-15T17:26:14.452+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:14.452+0000] {dag.py:3340} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
 [2023-03-15T17:26:14.462+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.147 seconds
+[2023-03-15T17:26:44.549+0000] {processor.py:154} INFO - Started process (PID=6648) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2023-03-15T17:26:44.550+0000] {processor.py:756} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2023-03-15T17:26:44.551+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:44.551+0000] {dagbag.py:537} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2023-03-15T17:26:44.561+0000] {processor.py:766} INFO - DAG(s) dict_keys(['example_external_task_marker_parent', 'example_external_task_marker_child']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2023-03-15T17:26:44.667+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:44.666+0000] {dag.py:2585} INFO - Sync 2 DAGs
+[2023-03-15T17:26:44.681+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:44.681+0000] {dag.py:3340} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
+[2023-03-15T17:26:44.685+0000] {logging_mixin.py:120} INFO - [2023-03-15T17:26:44.684+0000] {dag.py:3340} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
+[2023-03-15T17:26:44.695+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.149 seconds
