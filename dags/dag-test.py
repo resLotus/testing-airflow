@@ -3,6 +3,7 @@ from airflow.models import Variable
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from datetime import datetime, timedelta
 import pandas as pd
+import psycopg2
 
 default_args = {
   'owner': 'try',
@@ -51,10 +52,33 @@ def dag_test():
         filtered = movies.filter(items=column_filter)
         filtered.to_csv(variable_filter_path)
 
-    read_from_db = PostgresOperator(postgres_conn_id="postgres_test", task_id="read_from_db", sql="SELECT * FROM pg_catalog.pg_tables;")
+    @task(task_id='connect_to_db')
+    def connect_to_db(ti=None):
+        DB_NAME = ""
+        DB_USER = "airflow"
+        DB_PASS = "airflow"
+        DB_HOST = "postgres"
+        DB_PORT = "5432"
+
+        conn = psycopg2.connect(database=DB_NAME,
+                                user=DB_USER,
+                                password=DB_PASS,
+                                host=DB_HOST,
+                                port=DB_PORT)
+
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM pg_catalog.pg_tables")
+
+        rows = cur.fetchall()
+        for data in rows:
+            print("ID :" + str(data[0]))
+            print("NAME :" + data[1])
+
+    read_from_db = PostgresOperator(postgres_conn_id="postgres", task_id="read_from_db", sql="SELECT * FROM pg_catalog.pg_tables;")
 
     read_input_values() >> [filter_by_year_value(), filter_by_year_column()]
     filter_using_variable() >> read_from_db
+    connect_to_db()
 
 
 dag_test()

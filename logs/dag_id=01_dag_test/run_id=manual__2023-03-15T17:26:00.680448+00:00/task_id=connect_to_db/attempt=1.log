@@ -1,0 +1,239 @@
+[2023-03-15T17:26:01.523+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.connect_to_db manual__2023-03-15T17:26:00.680448+00:00 [queued]>
+[2023-03-15T17:26:01.530+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.connect_to_db manual__2023-03-15T17:26:00.680448+00:00 [queued]>
+[2023-03-15T17:26:01.531+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T17:26:01.531+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-03-15T17:26:01.532+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T17:26:01.540+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): connect_to_db> on 2023-03-15 17:26:00.680448+00:00
+[2023-03-15T17:26:01.547+0000] {standard_task_runner.py:55} INFO - Started process 5490 to run task
+[2023-03-15T17:26:01.550+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '01_dag_test', 'connect_to_db', 'manual__2023-03-15T17:26:00.680448+00:00', '--job-id', '1161', '--raw', '--subdir', 'DAGS_FOLDER/dag-test.py', '--cfg-path', '/tmp/tmp7jmw_cr3']
+[2023-03-15T17:26:01.553+0000] {standard_task_runner.py:83} INFO - Job 1161: Subtask connect_to_db
+[2023-03-15T17:26:01.630+0000] {task_command.py:376} INFO - Running <TaskInstance: 01_dag_test.connect_to_db manual__2023-03-15T17:26:00.680448+00:00 [running]> on host f11e2626d663
+[2023-03-15T17:26:01.687+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=01_dag_test
+AIRFLOW_CTX_TASK_ID=connect_to_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-15T17:26:00.680448+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-15T17:26:00.680448+00:00
+[2023-03-15T17:26:01.697+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.698+0000] {logging_mixin.py:120} INFO - NAME :log
+[2023-03-15T17:26:01.698+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.698+0000] {logging_mixin.py:120} INFO - NAME :dag_code
+[2023-03-15T17:26:01.699+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.699+0000] {logging_mixin.py:120} INFO - NAME :dag_pickle
+[2023-03-15T17:26:01.700+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.700+0000] {logging_mixin.py:120} INFO - NAME :slot_pool
+[2023-03-15T17:26:01.701+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.702+0000] {logging_mixin.py:120} INFO - NAME :pg_statistic
+[2023-03-15T17:26:01.702+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.703+0000] {logging_mixin.py:120} INFO - NAME :pg_type
+[2023-03-15T17:26:01.703+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.703+0000] {logging_mixin.py:120} INFO - NAME :connection
+[2023-03-15T17:26:01.704+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.704+0000] {logging_mixin.py:120} INFO - NAME :pg_foreign_table
+[2023-03-15T17:26:01.705+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.705+0000] {logging_mixin.py:120} INFO - NAME :pg_authid
+[2023-03-15T17:26:01.706+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.706+0000] {logging_mixin.py:120} INFO - NAME :callback_request
+[2023-03-15T17:26:01.706+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.707+0000] {logging_mixin.py:120} INFO - NAME :import_error
+[2023-03-15T17:26:01.707+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.708+0000] {logging_mixin.py:120} INFO - NAME :sla_miss
+[2023-03-15T17:26:01.708+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.709+0000] {logging_mixin.py:120} INFO - NAME :pg_statistic_ext_data
+[2023-03-15T17:26:01.709+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.709+0000] {logging_mixin.py:120} INFO - NAME :variable
+[2023-03-15T17:26:01.710+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.710+0000] {logging_mixin.py:120} INFO - NAME :job
+[2023-03-15T17:26:01.711+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.711+0000] {logging_mixin.py:120} INFO - NAME :serialized_dag
+[2023-03-15T17:26:01.712+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.712+0000] {logging_mixin.py:120} INFO - NAME :pg_largeobject
+[2023-03-15T17:26:01.713+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.713+0000] {logging_mixin.py:120} INFO - NAME :pg_user_mapping
+[2023-03-15T17:26:01.713+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.714+0000] {logging_mixin.py:120} INFO - NAME :pg_subscription
+[2023-03-15T17:26:01.714+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.715+0000] {logging_mixin.py:120} INFO - NAME :pg_attribute
+[2023-03-15T17:26:01.715+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.715+0000] {logging_mixin.py:120} INFO - NAME :pg_proc
+[2023-03-15T17:26:01.716+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.716+0000] {logging_mixin.py:120} INFO - NAME :pg_class
+[2023-03-15T17:26:01.716+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.717+0000] {logging_mixin.py:120} INFO - NAME :pg_attrdef
+[2023-03-15T17:26:01.717+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.717+0000] {logging_mixin.py:120} INFO - NAME :pg_constraint
+[2023-03-15T17:26:01.718+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.718+0000] {logging_mixin.py:120} INFO - NAME :pg_inherits
+[2023-03-15T17:26:01.718+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.719+0000] {logging_mixin.py:120} INFO - NAME :pg_index
+[2023-03-15T17:26:01.719+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.719+0000] {logging_mixin.py:120} INFO - NAME :pg_operator
+[2023-03-15T17:26:01.720+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.720+0000] {logging_mixin.py:120} INFO - NAME :pg_opfamily
+[2023-03-15T17:26:01.720+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.721+0000] {logging_mixin.py:120} INFO - NAME :pg_opclass
+[2023-03-15T17:26:01.721+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.722+0000] {logging_mixin.py:120} INFO - NAME :pg_am
+[2023-03-15T17:26:01.722+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.722+0000] {logging_mixin.py:120} INFO - NAME :pg_amop
+[2023-03-15T17:26:01.723+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.723+0000] {logging_mixin.py:120} INFO - NAME :pg_amproc
+[2023-03-15T17:26:01.723+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.724+0000] {logging_mixin.py:120} INFO - NAME :pg_language
+[2023-03-15T17:26:01.724+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.725+0000] {logging_mixin.py:120} INFO - NAME :pg_largeobject_metadata
+[2023-03-15T17:26:01.725+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.725+0000] {logging_mixin.py:120} INFO - NAME :pg_aggregate
+[2023-03-15T17:26:01.726+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.726+0000] {logging_mixin.py:120} INFO - NAME :pg_statistic_ext
+[2023-03-15T17:26:01.726+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.726+0000] {logging_mixin.py:120} INFO - NAME :pg_rewrite
+[2023-03-15T17:26:01.727+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.727+0000] {logging_mixin.py:120} INFO - NAME :pg_trigger
+[2023-03-15T17:26:01.727+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.727+0000] {logging_mixin.py:120} INFO - NAME :pg_event_trigger
+[2023-03-15T17:26:01.728+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.728+0000] {logging_mixin.py:120} INFO - NAME :pg_description
+[2023-03-15T17:26:01.728+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.728+0000] {logging_mixin.py:120} INFO - NAME :pg_cast
+[2023-03-15T17:26:01.729+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.729+0000] {logging_mixin.py:120} INFO - NAME :pg_enum
+[2023-03-15T17:26:01.730+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.730+0000] {logging_mixin.py:120} INFO - NAME :pg_namespace
+[2023-03-15T17:26:01.731+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.731+0000] {logging_mixin.py:120} INFO - NAME :pg_conversion
+[2023-03-15T17:26:01.731+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.732+0000] {logging_mixin.py:120} INFO - NAME :pg_depend
+[2023-03-15T17:26:01.732+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.733+0000] {logging_mixin.py:120} INFO - NAME :pg_database
+[2023-03-15T17:26:01.733+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.733+0000] {logging_mixin.py:120} INFO - NAME :pg_db_role_setting
+[2023-03-15T17:26:01.734+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.734+0000] {logging_mixin.py:120} INFO - NAME :pg_tablespace
+[2023-03-15T17:26:01.734+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.735+0000] {logging_mixin.py:120} INFO - NAME :pg_auth_members
+[2023-03-15T17:26:01.735+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.735+0000] {logging_mixin.py:120} INFO - NAME :pg_shdepend
+[2023-03-15T17:26:01.736+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.736+0000] {logging_mixin.py:120} INFO - NAME :pg_shdescription
+[2023-03-15T17:26:01.736+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.737+0000] {logging_mixin.py:120} INFO - NAME :pg_ts_config
+[2023-03-15T17:26:01.737+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.737+0000] {logging_mixin.py:120} INFO - NAME :pg_ts_config_map
+[2023-03-15T17:26:01.738+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.738+0000] {logging_mixin.py:120} INFO - NAME :pg_ts_dict
+[2023-03-15T17:26:01.739+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.739+0000] {logging_mixin.py:120} INFO - NAME :pg_ts_parser
+[2023-03-15T17:26:01.739+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.740+0000] {logging_mixin.py:120} INFO - NAME :pg_ts_template
+[2023-03-15T17:26:01.740+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.740+0000] {logging_mixin.py:120} INFO - NAME :pg_extension
+[2023-03-15T17:26:01.741+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.741+0000] {logging_mixin.py:120} INFO - NAME :pg_foreign_data_wrapper
+[2023-03-15T17:26:01.741+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.742+0000] {logging_mixin.py:120} INFO - NAME :pg_foreign_server
+[2023-03-15T17:26:01.742+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.742+0000] {logging_mixin.py:120} INFO - NAME :pg_policy
+[2023-03-15T17:26:01.743+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.743+0000] {logging_mixin.py:120} INFO - NAME :pg_replication_origin
+[2023-03-15T17:26:01.743+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.744+0000] {logging_mixin.py:120} INFO - NAME :pg_default_acl
+[2023-03-15T17:26:01.744+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.744+0000] {logging_mixin.py:120} INFO - NAME :pg_init_privs
+[2023-03-15T17:26:01.745+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.745+0000] {logging_mixin.py:120} INFO - NAME :pg_seclabel
+[2023-03-15T17:26:01.745+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.746+0000] {logging_mixin.py:120} INFO - NAME :pg_shseclabel
+[2023-03-15T17:26:01.746+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.747+0000] {logging_mixin.py:120} INFO - NAME :pg_collation
+[2023-03-15T17:26:01.747+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.748+0000] {logging_mixin.py:120} INFO - NAME :pg_partitioned_table
+[2023-03-15T17:26:01.748+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.749+0000] {logging_mixin.py:120} INFO - NAME :pg_range
+[2023-03-15T17:26:01.749+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.750+0000] {logging_mixin.py:120} INFO - NAME :pg_transform
+[2023-03-15T17:26:01.750+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.751+0000] {logging_mixin.py:120} INFO - NAME :pg_sequence
+[2023-03-15T17:26:01.751+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.751+0000] {logging_mixin.py:120} INFO - NAME :pg_publication
+[2023-03-15T17:26:01.752+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.752+0000] {logging_mixin.py:120} INFO - NAME :pg_publication_rel
+[2023-03-15T17:26:01.752+0000] {logging_mixin.py:120} INFO - ID :pg_catalog
+[2023-03-15T17:26:01.753+0000] {logging_mixin.py:120} INFO - NAME :pg_subscription_rel
+[2023-03-15T17:26:01.753+0000] {logging_mixin.py:120} INFO - ID :information_schema
+[2023-03-15T17:26:01.754+0000] {logging_mixin.py:120} INFO - NAME :sql_implementation_info
+[2023-03-15T17:26:01.756+0000] {logging_mixin.py:120} INFO - ID :information_schema
+[2023-03-15T17:26:01.756+0000] {logging_mixin.py:120} INFO - NAME :sql_parts
+[2023-03-15T17:26:01.757+0000] {logging_mixin.py:120} INFO - ID :information_schema
+[2023-03-15T17:26:01.757+0000] {logging_mixin.py:120} INFO - NAME :sql_sizing
+[2023-03-15T17:26:01.758+0000] {logging_mixin.py:120} INFO - ID :information_schema
+[2023-03-15T17:26:01.758+0000] {logging_mixin.py:120} INFO - NAME :sql_features
+[2023-03-15T17:26:01.759+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.759+0000] {logging_mixin.py:120} INFO - NAME :ab_user
+[2023-03-15T17:26:01.760+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.760+0000] {logging_mixin.py:120} INFO - NAME :ab_register_user
+[2023-03-15T17:26:01.760+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.761+0000] {logging_mixin.py:120} INFO - NAME :dataset
+[2023-03-15T17:26:01.761+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.762+0000] {logging_mixin.py:120} INFO - NAME :dag_schedule_dataset_reference
+[2023-03-15T17:26:01.762+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.762+0000] {logging_mixin.py:120} INFO - NAME :dag
+[2023-03-15T17:26:01.763+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.763+0000] {logging_mixin.py:120} INFO - NAME :task_outlet_dataset_reference
+[2023-03-15T17:26:01.763+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.764+0000] {logging_mixin.py:120} INFO - NAME :dataset_dag_run_queue
+[2023-03-15T17:26:01.764+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.765+0000] {logging_mixin.py:120} INFO - NAME :log_template
+[2023-03-15T17:26:01.766+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.766+0000] {logging_mixin.py:120} INFO - NAME :dag_run
+[2023-03-15T17:26:01.767+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.767+0000] {logging_mixin.py:120} INFO - NAME :dag_tag
+[2023-03-15T17:26:01.768+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.768+0000] {logging_mixin.py:120} INFO - NAME :dag_owner_attributes
+[2023-03-15T17:26:01.769+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.769+0000] {logging_mixin.py:120} INFO - NAME :dag_warning
+[2023-03-15T17:26:01.769+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.770+0000] {logging_mixin.py:120} INFO - NAME :ab_permission
+[2023-03-15T17:26:01.770+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.771+0000] {logging_mixin.py:120} INFO - NAME :ab_permission_view
+[2023-03-15T17:26:01.771+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.772+0000] {logging_mixin.py:120} INFO - NAME :ab_view_menu
+[2023-03-15T17:26:01.772+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.773+0000] {logging_mixin.py:120} INFO - NAME :ab_user_role
+[2023-03-15T17:26:01.773+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.774+0000] {logging_mixin.py:120} INFO - NAME :ab_role
+[2023-03-15T17:26:01.774+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.775+0000] {logging_mixin.py:120} INFO - NAME :dagrun_dataset_event
+[2023-03-15T17:26:01.775+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.775+0000] {logging_mixin.py:120} INFO - NAME :dataset_event
+[2023-03-15T17:26:01.776+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.776+0000] {logging_mixin.py:120} INFO - NAME :trigger
+[2023-03-15T17:26:01.777+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.777+0000] {logging_mixin.py:120} INFO - NAME :task_instance
+[2023-03-15T17:26:01.777+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.778+0000] {logging_mixin.py:120} INFO - NAME :ab_permission_view_role
+[2023-03-15T17:26:01.778+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.778+0000] {logging_mixin.py:120} INFO - NAME :task_fail
+[2023-03-15T17:26:01.778+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.779+0000] {logging_mixin.py:120} INFO - NAME :task_map
+[2023-03-15T17:26:01.779+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.780+0000] {logging_mixin.py:120} INFO - NAME :task_reschedule
+[2023-03-15T17:26:01.780+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.780+0000] {logging_mixin.py:120} INFO - NAME :xcom
+[2023-03-15T17:26:01.781+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.781+0000] {logging_mixin.py:120} INFO - NAME :rendered_task_instance_fields
+[2023-03-15T17:26:01.782+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.782+0000] {logging_mixin.py:120} INFO - NAME :session
+[2023-03-15T17:26:01.782+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.783+0000] {logging_mixin.py:120} INFO - NAME :alembic_version
+[2023-03-15T17:26:01.783+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.784+0000] {logging_mixin.py:120} INFO - NAME :celery_taskmeta
+[2023-03-15T17:26:01.784+0000] {logging_mixin.py:120} INFO - ID :public
+[2023-03-15T17:26:01.785+0000] {logging_mixin.py:120} INFO - NAME :celery_tasksetmeta
+[2023-03-15T17:26:01.786+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-15T17:26:01.797+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=01_dag_test, task_id=connect_to_db, execution_date=20230315T172600, start_date=20230315T172601, end_date=20230315T172601
+[2023-03-15T17:26:01.842+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-15T17:26:01.858+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
