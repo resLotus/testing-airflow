@@ -1,0 +1,36 @@
+[2023-03-15T16:08:57.873+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.filter_using_variable scheduled__2022-08-28T00:00:00+00:00 [queued]>
+[2023-03-15T16:08:57.889+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.filter_using_variable scheduled__2022-08-28T00:00:00+00:00 [queued]>
+[2023-03-15T16:08:57.890+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:08:57.892+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-03-15T16:08:57.892+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:08:57.975+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): filter_using_variable> on 2022-08-28 00:00:00+00:00
+[2023-03-15T16:08:58.007+0000] {standard_task_runner.py:55} INFO - Started process 716 to run task
+[2023-03-15T16:08:58.089+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '01_dag_test', 'filter_using_variable', 'scheduled__2022-08-28T00:00:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/dag-test.py', '--cfg-path', '/tmp/tmp_lkblnse']
+[2023-03-15T16:08:58.095+0000] {standard_task_runner.py:83} INFO - Job 102: Subtask filter_using_variable
+[2023-03-15T16:08:58.421+0000] {task_command.py:376} INFO - Running <TaskInstance: 01_dag_test.filter_using_variable scheduled__2022-08-28T00:00:00+00:00 [running]> on host f11e2626d663
+[2023-03-15T16:08:58.744+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=01_dag_test
+AIRFLOW_CTX_TASK_ID=filter_using_variable
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-28T00:00:00+00:00
+[2023-03-15T16:08:58.782+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag-test.py", line 49, in filter_using_variable
+    column_filter = Variable.get("column_filter").split(',')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable column_filter does not exist'
+[2023-03-15T16:08:58.800+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=01_dag_test, task_id=filter_using_variable, execution_date=20220828T000000, start_date=20230315T160857, end_date=20230315T160858
+[2023-03-15T16:08:58.820+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 102 for task filter_using_variable ('Variable column_filter does not exist'; 716)
+[2023-03-15T16:08:58.970+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-03-15T16:08:59.049+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

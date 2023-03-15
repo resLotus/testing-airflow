@@ -1,0 +1,36 @@
+[2023-03-15T16:10:57.562+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.read_from_db scheduled__2022-11-27T00:00:00+00:00 [queued]>
+[2023-03-15T16:10:57.583+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.read_from_db scheduled__2022-11-27T00:00:00+00:00 [queued]>
+[2023-03-15T16:10:57.584+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:10:57.585+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-03-15T16:10:57.585+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:10:57.626+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): read_from_db> on 2022-11-27 00:00:00+00:00
+[2023-03-15T16:10:57.646+0000] {standard_task_runner.py:55} INFO - Started process 2227 to run task
+[2023-03-15T16:10:57.669+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '01_dag_test', 'read_from_db', 'scheduled__2022-11-27T00:00:00+00:00', '--job-id', '583', '--raw', '--subdir', 'DAGS_FOLDER/dag-test.py', '--cfg-path', '/tmp/tmpahrlz7u4']
+[2023-03-15T16:10:57.681+0000] {standard_task_runner.py:83} INFO - Job 583: Subtask read_from_db
+[2023-03-15T16:10:57.886+0000] {task_command.py:376} INFO - Running <TaskInstance: 01_dag_test.read_from_db scheduled__2022-11-27T00:00:00+00:00 [running]> on host f11e2626d663
+[2023-03-15T16:10:58.043+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=01_dag_test
+AIRFLOW_CTX_TASK_ID=read_from_db
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-27T00:00:00+00:00
+[2023-03-15T16:10:58.077+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 94, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 288, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 88, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 70, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 432, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_test` isn't defined
+[2023-03-15T16:10:58.087+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=01_dag_test, task_id=read_from_db, execution_date=20221127T000000, start_date=20230315T161057, end_date=20230315T161058
+[2023-03-15T16:10:58.120+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 583 for task read_from_db (The conn_id `postgres_test` isn't defined; 2227)
+[2023-03-15T16:10:58.157+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-03-15T16:10:58.198+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

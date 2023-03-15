@@ -1,0 +1,26 @@
+[2023-03-15T16:13:07.774+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.read_input_values scheduled__2023-03-12T00:00:00+00:00 [queued]>
+[2023-03-15T16:13:07.787+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.read_input_values scheduled__2023-03-12T00:00:00+00:00 [queued]>
+[2023-03-15T16:13:07.788+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:13:07.788+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-03-15T16:13:07.789+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:13:07.811+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): read_input_values> on 2023-03-12 00:00:00+00:00
+[2023-03-15T16:13:07.827+0000] {standard_task_runner.py:55} INFO - Started process 3836 to run task
+[2023-03-15T16:13:07.843+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '01_dag_test', 'read_input_values', 'scheduled__2023-03-12T00:00:00+00:00', '--job-id', '1092', '--raw', '--subdir', 'DAGS_FOLDER/dag-test.py', '--cfg-path', '/tmp/tmpkvnm8zqx']
+[2023-03-15T16:13:07.849+0000] {standard_task_runner.py:83} INFO - Job 1092: Subtask read_input_values
+[2023-03-15T16:13:07.954+0000] {task_command.py:376} INFO - Running <TaskInstance: 01_dag_test.read_input_values scheduled__2023-03-12T00:00:00+00:00 [running]> on host f11e2626d663
+[2023-03-15T16:13:08.110+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=01_dag_test
+AIRFLOW_CTX_TASK_ID=read_input_values
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-12T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-12T00:00:00+00:00
+[2023-03-15T16:13:08.141+0000] {logging_mixin.py:120} INFO -              Key  Value
+0    year_filter   2010
+1  column_filter  Title
+[2023-03-15T16:13:08.212+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-15T16:13:08.229+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=01_dag_test, task_id=read_input_values, execution_date=20230312T000000, start_date=20230315T161307, end_date=20230315T161308
+[2023-03-15T16:13:08.338+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-15T16:13:08.380+0000] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

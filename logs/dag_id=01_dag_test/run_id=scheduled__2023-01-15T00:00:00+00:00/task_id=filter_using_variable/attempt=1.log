@@ -1,0 +1,23 @@
+[2023-03-15T16:11:54.652+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.filter_using_variable scheduled__2023-01-15T00:00:00+00:00 [queued]>
+[2023-03-15T16:11:54.704+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 01_dag_test.filter_using_variable scheduled__2023-01-15T00:00:00+00:00 [queued]>
+[2023-03-15T16:11:54.707+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:11:54.708+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-03-15T16:11:54.709+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T16:11:54.783+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): filter_using_variable> on 2023-01-15 00:00:00+00:00
+[2023-03-15T16:11:54.831+0000] {standard_task_runner.py:55} INFO - Started process 2940 to run task
+[2023-03-15T16:11:54.880+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '01_dag_test', 'filter_using_variable', 'scheduled__2023-01-15T00:00:00+00:00', '--job-id', '803', '--raw', '--subdir', 'DAGS_FOLDER/dag-test.py', '--cfg-path', '/tmp/tmp59tq75mz']
+[2023-03-15T16:11:54.900+0000] {standard_task_runner.py:83} INFO - Job 803: Subtask filter_using_variable
+[2023-03-15T16:11:55.253+0000] {task_command.py:376} INFO - Running <TaskInstance: 01_dag_test.filter_using_variable scheduled__2023-01-15T00:00:00+00:00 [running]> on host f11e2626d663
+[2023-03-15T16:11:55.482+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=01_dag_test
+AIRFLOW_CTX_TASK_ID=filter_using_variable
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-15T00:00:00+00:00
+[2023-03-15T16:11:55.526+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-15T16:11:55.547+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=01_dag_test, task_id=filter_using_variable, execution_date=20230115T000000, start_date=20230315T161154, end_date=20230315T161155
+[2023-03-15T16:11:55.687+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-15T16:11:55.720+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
