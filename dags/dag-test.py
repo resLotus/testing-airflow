@@ -1,6 +1,7 @@
 from airflow.decorators import dag, task
 from airflow.models import Variable
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.hooks.postgres_hook import PostgresHook
 from datetime import datetime, timedelta
 import pandas as pd
 import psycopg2
@@ -54,31 +55,55 @@ def dag_test():
 
     @task(task_id='connect_to_db')
     def connect_to_db(ti=None):
-        DB_NAME = ""
-        DB_USER = ""
-        DB_PASS = ""
-        DB_HOST = ""
-        DB_PORT = ""
-
-        conn = psycopg2.connect(database=DB_NAME,
-                                user=DB_USER,
-                                password=DB_PASS,
-                                host=DB_HOST,
-                                port=DB_PORT)
-
+        pg_hook = PostgresHook(postgres_conn_id="postgres", task_id="connect_to_db")
+        conn = pg_hook.get_conn()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM pg_catalog.pg_tables")
+
+        # DB_NAME = ""
+        # DB_USER = "airflow"
+        # DB_PASS = "airflow"
+        # DB_HOST = "postgres"
+        # DB_PORT = "5432"
+
+        # conn = psycopg2.connect(database=DB_NAME,
+        #                         user=DB_USER,
+        #                         password=DB_PASS,
+        #                         host=DB_HOST,
+        #                         port=DB_PORT)
+
+        # cur = conn.cursor()
+
+        # cur.execute("""
+        #     CREATE TABLE Employee
+        #     (
+        #         ID INT   PRIMARY KEY NOT NULL,
+        #         NAME TEXT NOT NULL,
+        #         EMAIL TEXT NOT NULL
+        #     )
+        # """)
+
+        # cur.execute("""
+        #     INSERT INTO Employee (ID,NAME,EMAIL) VALUES
+        #     (1,'Alan Walker','awalker@gmail.com'),
+        #     (2,'Steve Jobs','sjobs@gmail.com')
+        # """)
+
+        cur.execute("SELECT * FROM Employee")
 
         rows = cur.fetchall()
         for data in rows:
             print("ID :" + str(data[0]))
             print("NAME :" + data[1])
+            print("EMAIL :" + data[2])
 
-    read_from_db = PostgresOperator(postgres_conn_id="postgres", task_id="read_from_db", sql="SELECT * FROM pg_catalog.pg_tables;")
+        conn.commit()
+        conn.close()
+
+    read_from_db = PostgresOperator(postgres_conn_id="postgres", task_id="read_from_db", sql="SELECT * FROM Employee;")
 
     read_input_values() >> [filter_by_year_value(), filter_by_year_column()]
-    filter_using_variable() >> read_from_db
-    connect_to_db()
+    filter_using_variable()
+    connect_to_db() >> read_from_db
 
 
 dag_test()
